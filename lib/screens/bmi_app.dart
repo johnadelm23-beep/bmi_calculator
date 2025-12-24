@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_screen/result_screen.dart';
+import 'package:my_screen/screens/home_screen.dart';
+
 import 'home_screen.dart';
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -7,7 +8,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: FirstScreen(),
+      debugShowCheckedModeBanner: false,
+      home:FirstScreen(),
+      
     );
   }
 }
