@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'first_screen.dart';
-import 'second_screen.dart';
+import '../extra_screens/first_screen.dart';
+import '../extra_screens/second_screen.dart';
 class RunScreen extends StatelessWidget {
   const RunScreen({super.key});
 
