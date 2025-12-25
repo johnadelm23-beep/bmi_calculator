@@ -1,39 +1,47 @@
 import 'package:flutter/material.dart';
-class InfoContainersSign extends StatelessWidget {
-  const InfoContainersSign({super.key, required this.title, required this.date, required this.icon, required this.color});
-final String title;
-  final String date;
+class InfoContainerSign extends StatelessWidget {
+  const InfoContainerSign({super.key, required this.name, required this.time, required this.icon, required this.color});
+  final String name;
+  final String time;
   final IconData icon;
   final Color color;
   @override
   Widget build(BuildContext context) {
-return  Padding(
-padding: const EdgeInsets.only(left: 15,right: 15),
-child: Container(
-width: double.infinity,
-height: 80,
-decoration: BoxDecoration(borderRadius: BorderRadius.circular(0),color: Colors.white70),
-child: Padding(
-padding: const EdgeInsets.only(left: 5),
-child: Column(
-mainAxisAlignment: .spaceEvenly,
-crossAxisAlignment: .start,
-children: [
-Text(title,style: TextStyle(fontSize: 20,color: Colors.black),),
-Row(
+    return  Container(
+      width: double.infinity,
+      height: 80,
+      decoration: BoxDecoration(borderRadius: BorderRadiusGeometry.circular(12),color: Colors.white),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: Row(
 
-children: [
-Icon(Icons.alarm,size: 25,color: Colors.black,),
-Text(date,style: TextStyle(fontSize: 20,color: Colors.black ),),
-  Spacer(),
-  Icon(icon,size:35,color: color,)
+          children: [
+            Column(
+              mainAxisAlignment: .spaceEvenly,
+              crossAxisAlignment: .start,
+              children: [
+                Text(name,style: TextStyle(fontSize: 20,color: Colors.black),),
+                Row(
+                  crossAxisAlignment: .end,
+                  children: [
+                    Icon(Icons.alarm,color: Colors.black,),
+                    Text(time,style: TextStyle(color: Colors.black),)
+                  ],
+                )
 
-],
-)
-],
-),
-),
-),
-);
-}
+              ],
+            ),
+            Spacer(),
+            Column(
+              mainAxisAlignment: .center,
+              crossAxisAlignment: .end,
+              children: [
+                Icon(icon,color: color,size: 35,)
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }

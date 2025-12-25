@@ -33,9 +33,9 @@ class SecondScreen extends StatelessWidget {
         SizedBox(height: 5,),
         InfoContainer(title: "Diana Stefan", time: " 15:20"),
         SizedBox(height: 5,),
-        InfoContainersSign(title: "Alexandru Sandu", date: " 16:40", icon: Icons.close, color: Colors.red),
+        InfoContainerSign(name: "Alexandru Sandu", time: " 16:40", icon: Icons.close, color: Colors.red),
         SizedBox(height: 5,),
-        InfoContainersSign(title: "Dumitru Simona", date: " 08:00", icon: Icons.done_all, color: Colors.blue),
+        InfoContainerSign(name: "Dumitru Simona", time: " 08:00", icon: Icons.done_all, color: Colors.blue),
       ],
     ),
   );}}

@@ -7,7 +7,8 @@ class RunScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SecondScreen(),
+      debugShowCheckedModeBanner: false,
+      home:SecondScreen(),
     );
   }
 }
