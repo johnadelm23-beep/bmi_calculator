@@ -25,7 +25,7 @@ class InfoContainerSign extends StatelessWidget {
                   crossAxisAlignment: .end,
                   children: [
                     Icon(Icons.alarm,color: Colors.black,),
-                    Text(time,style: TextStyle(color: Colors.black),)
+                    Text(time,style: TextStyle(color: Colors.black,fontSize:20),)
                   ],
                 )
 
