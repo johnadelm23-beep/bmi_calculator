@@ -41,6 +41,7 @@ class WeightAgeContainer extends StatelessWidget {
               mainAxisAlignment: .spaceEvenly,
               children: [
                 FloatingActionButton(
+                  heroTag: "$title 1",
                   onPressed: increase,
                   backgroundColor: Color(0xff8B8C9E),
                   shape: RoundedRectangleBorder(
@@ -51,6 +52,7 @@ class WeightAgeContainer extends StatelessWidget {
 
                 SizedBox(width: 35),
                 FloatingActionButton(
+                  heroTag: "$title 2",
                   onPressed: decrease,
                   backgroundColor: Color(0xff8B8C9E),
                   shape: RoundedRectangleBorder(

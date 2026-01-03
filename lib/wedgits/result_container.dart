@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ResultContainer extends StatelessWidget {
-  const ResultContainer({super.key});
-
+  const ResultContainer({
+    super.key,
+    required this.text,
+    required this.result,
+    required this.status,
+  });
+  final String text;
+  final double result;
+  final String status;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +29,7 @@ class ResultContainer extends StatelessWidget {
                   mainAxisAlignment: .center,
                   children: [
                     Text(
-                      "Normal",
+                      status,
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -34,7 +41,7 @@ class ResultContainer extends StatelessWidget {
               ),
               SizedBox(height: 33),
               Text(
-                "19.2",
+                result.toStringAsFixed(2),
                 style: TextStyle(
                   fontSize: 64,
                   fontWeight: FontWeight.bold,
@@ -43,8 +50,9 @@ class ResultContainer extends StatelessWidget {
               ),
               SizedBox(height: 70),
               Text(
-                "You Have a Normal Body Weight,\n                  Good Job.",
+                text,
                 style: TextStyle(fontSize: 16, color: Colors.white),
+                textAlign: TextAlign.center,
               ),
             ],
           ),

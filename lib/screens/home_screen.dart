@@ -1,4 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:my_screen/screens/result_screen.dart';
+import 'package:my_screen/wedgits/custom_app_bar.dart';
 import 'package:my_screen/wedgits/gender_container.dart';
 import 'package:my_screen/wedgits/weight_age_container.dart';
 
@@ -14,21 +18,14 @@ class _FirstScreenState extends State<FirstScreen> {
   bool isFemale = false;
   bool isOn = false;
   int height = 50;
-  int weight = 10;
-  int age = 10;
+  int weight = 0;
+  int age = 5;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff1C2134),
-      appBar: AppBar(
-        backgroundColor: Color(0xff24263B),
-        title: Text(
-          "BMI Calculator",
-          style: TextStyle(fontSize: 20, color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
+      appBar: CustomAppBar(withLeading: false),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 26),
         child: Column(
@@ -38,7 +35,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 GenderContainer(
                   title: "Male",
                   icon: Icons.male,
-                  color: isMAle ? Color(0xff333244) : Color(0xff24263B),
+                  color: isMAle ? Color(0xffF53A84) : Color(0xff24263B),
                   onTap: () {
                     setState(() {
                       isMAle = true;
@@ -56,7 +53,7 @@ class _FirstScreenState extends State<FirstScreen> {
                       isMAle = false;
                     });
                   },
-                  color: isFemale ? Color(0xff333244) : Color(0xff24263B),
+                  color: isFemale ? Color(0xffF53A84) : Color(0xff24263B),
                 ),
               ],
             ),
@@ -153,7 +150,16 @@ class _FirstScreenState extends State<FirstScreen> {
         ),
       ),
       bottomNavigationBar: InkWell(
-        onTap: () {},
+        onTap: () {
+          double finalHeight = height / 100;
+          double finalResult = weight / pow(finalHeight, 2);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SecondScreen(resultNumber: finalResult),
+            ),
+          );
+        },
         child: Container(
           height: 80,
           color: Color(0xffF53A84),
