@@ -4,12 +4,10 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.![photo_2025-12-17_00-52-31](https://github.com/user-attachments/assets/6621887c-e631-4804-8371-db54a5abf365)
-![photo_2025-12-17_00-55-49](https://github.com/user-attachments/assets/e223945e-8a72-4816-bebd-2b[Uploading (11) WhatsApp.html…]()
-61b1feedb7)<!DOCTYPE html>
+This project is a starting point for a Flutter application
 
 
-https://github.com/user-attachments/assets/3e9c30d8-6973-45e7-bc45-30f845d5c8cf
+
 
 
 A few resources to get you started if this is your first Flutter project:
